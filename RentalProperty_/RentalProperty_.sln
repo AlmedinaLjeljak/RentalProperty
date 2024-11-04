@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RentalProperty_", "RentalProperty_\RentalProperty_.csproj", "{7149540C-4D54-4E30-90EA-86A08E2BEFFD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7149540C-4D54-4E30-90EA-86A08E2BEFFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7149540C-4D54-4E30-90EA-86A08E2BEFFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7149540C-4D54-4E30-90EA-86A08E2BEFFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7149540C-4D54-4E30-90EA-86A08E2BEFFD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {40AC7CB5-F215-47B9-9E9F-D5C8EB03E969}
+	EndGlobalSection
+EndGlobal
