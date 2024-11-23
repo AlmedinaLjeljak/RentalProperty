@@ -12,57 +12,57 @@ namespace RentalProperty_
 
 		public IConfiguration Configuration { get; }
 
-		// This method gets called by the runtime. Use this method to add services to the container.
 		public void ConfigureServices(IServiceCollection services)
 		{
+			// Setup DbContext with SQL Server
 			services.AddDbContext<DataContext>(options =>
-				options.UseSqlServer(
-					Configuration.GetConnectionString("DefaultConnection")));
-
+				options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+			services.AddLogging();
+			// Add controllers
 
 			services.AddControllers();
 
-			// Register the Swagger generator, defining 1 or more Swagger documents
-			services.AddSwaggerGen();
+			// Register Swagger
+			services.AddSwaggerGen(options =>
+			{
+				options.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo
+				{
+					Title = "RentalProperty API",
+					Version = "v1"
+				});
+			});
 		}
 
-		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
 		public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
 		{
 			if (env.IsDevelopment())
 			{
 				app.UseDeveloperExceptionPage();
-				
 			}
 			else
 			{
 				app.UseExceptionHandler("/Error");
-				// The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
 				app.UseHsts();
 			}
-
 
 			app.UseDefaultFiles();
 			app.UseStaticFiles();
 
 			app.UseHttpsRedirection();
-			app.UseSwagger();
 
-			// Enable middleware to serve swagger-ui (HTML, JS, CSS, etc.),
-			// specifying the Swagger JSON endpoint.
+			// Swagger configuration
+			app.UseSwagger();
 			app.UseSwaggerUI(c =>
 			{
-				c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
+				c.SwaggerEndpoint("/swagger/v1/swagger.json", "RentalProperty API V1");
 			});
 
-			app.UseCors(
-			   options => options
-			   .SetIsOriginAllowed(x => _ = true)
-			   .AllowAnyMethod()
-			   .AllowAnyHeader()
-			   .AllowCredentials()
-		   ); //This needs to set everything allowed
-
+			// CORS
+			app.UseCors(options => options
+				.SetIsOriginAllowed(x => _ = true)
+				.AllowAnyMethod()
+				.AllowAnyHeader()
+				.AllowCredentials());
 
 			app.UseRouting();
 

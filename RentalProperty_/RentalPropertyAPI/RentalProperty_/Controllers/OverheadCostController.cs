@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using RentalProperty_.Data;
+using RentalProperty_.Models;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -11,11 +12,11 @@ namespace RentalProperty_.Controllers
 	[Authorize]
 	[ApiController]
 	[Route("[controller]")]
-	public class OverheadCost : ControllerBase
+	public class OverheadCostController : ControllerBase
 	{
 		private readonly DataContext _dbContext;
 
-		public OverheadCost(DataContext dataContext)
+		public OverheadCostController(DataContext dataContext)
 		{
 			_dbContext = dataContext;
 		}

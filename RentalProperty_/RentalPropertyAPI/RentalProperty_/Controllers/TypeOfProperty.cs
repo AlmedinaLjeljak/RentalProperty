@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using RentalProperty_.Data;
-using RentalProperty_.Models; // Zameni sa stvarnim imenom namespace-a za model
+using RentalProperty_.Models; 
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
