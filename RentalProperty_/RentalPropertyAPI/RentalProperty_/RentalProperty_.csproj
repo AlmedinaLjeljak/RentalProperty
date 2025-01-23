@@ -18,7 +18,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Entities\Endpoint\" />
+    <Folder Include="Entities\ViewModels\" />
     <Folder Include="Migrations\" />
+    <Folder Include="Configuration\" />
   </ItemGroup>
 
 </Project>
