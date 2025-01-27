@@ -1,4 +1,5 @@
-﻿using RentalProperty_.Data;
+﻿using Microsoft.EntityFrameworkCore;
+using RentalProperty_.Data;
 using RentalProperty_.Entities.Models;
 using System.Text.Json.Serialization;
 
@@ -32,7 +33,7 @@ namespace RentalProperty_.Helper.AutentifikacijaAutorizacija
 		public static AutentifikacijaToken? GetAuthToken(this HttpContext httpContext)
 		{
 			string token = httpContext.GetMyAuthToken();
-			 DataContext db = httpContext.RequestServices.GetService<DataContex>();
+			 DataContext db = httpContext.RequestServices.GetService<DataContext>();
 
 			AutentifikacijaToken? korisnickiNalog = db.AutentifikacijaToken
 				.Include(s => s.korisnickiNalog)

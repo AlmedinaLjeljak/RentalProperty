@@ -1,4 +1,5 @@
-﻿using RentalProperty_.Data;
+﻿using Microsoft.EntityFrameworkCore;
+using RentalProperty_.Data;
 using RentalProperty_.Entities.Models;
 using System.Text.Json.Serialization;
 

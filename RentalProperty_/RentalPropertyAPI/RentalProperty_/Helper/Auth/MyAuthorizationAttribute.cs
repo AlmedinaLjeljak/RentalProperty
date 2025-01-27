@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.AspNetCore.Mvc;
+using RentalProperty_.Services;
 
 namespace RentalProperty_.Helper.Auth
 {
