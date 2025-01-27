@@ -18,7 +18,7 @@ namespace RentalProperty_.Entities.Controllers
 		[HttpGet]
 		public object GetAll()
 		{
-			var sviKorisnici = db.Korisniks.Include("Spol").Include("Grad").Include("Drzava").OrderBy(x => x.ID)
+			var sviKorisnici = db.Korisnik.Include("Spol").Include("Grad").Include("Drzava").OrderBy(x => x.ID)
 				.Select(x => new
 				{
 					id = x.ID,

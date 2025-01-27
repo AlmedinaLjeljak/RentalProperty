@@ -17,7 +17,7 @@ namespace RentalProperty_.Entities.Controllers
 		[HttpGet]
 		public object GetAll()
 		{
-			var gradovi = db.Grads.OrderBy(x => x.ID)
+			var gradovi = db.Grad.OrderBy(x => x.ID)
 				.Select(x => new
 				{
 					Id = x.ID,

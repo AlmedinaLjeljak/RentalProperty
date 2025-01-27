@@ -16,7 +16,7 @@ namespace RentalProperty_.Entities.Controllers
 		[HttpGet]
 		public object GetAll()
 		{
-			var sviZapiis = db.AutentifikacijaTokens
+			var sviZapiis = db.AutentifikacijaToken
 				.Select(x => new
 				{
 					id=x.KorisnickiNalogId,

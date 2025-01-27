@@ -17,7 +17,7 @@ namespace RentalProperty_.Entities.Controllers
 		[HttpGet]
 		public object GetAll()
 		{
-			var sviZapisi = db.Recenzijas
+			var sviZapisi = db.Recenzija
 				.Select(x => new
 				{
 					id = x.Id,

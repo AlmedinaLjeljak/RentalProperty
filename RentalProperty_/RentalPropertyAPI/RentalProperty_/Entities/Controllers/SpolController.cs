@@ -16,7 +16,7 @@ namespace RentalProperty_.Entities.Controllers
 		[HttpGet]
 		public object GetAll()
 		{
-			var sviZapisi = db.Spols.OrderBy(x => x.ID)
+			var sviZapisi = db.Spol.OrderBy(x => x.ID)
 				.Select(x => new
 				{
 					id = x.ID,
