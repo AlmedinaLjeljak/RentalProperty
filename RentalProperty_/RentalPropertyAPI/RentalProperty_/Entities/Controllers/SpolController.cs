@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using RentalProperty_.Data;
+using RentalProperty_.Entities.Models;
+using RentalProperty_.Entities.ViewModels;
 
 namespace RentalProperty_.Entities.Controllers
 {
@@ -23,6 +25,17 @@ namespace RentalProperty_.Entities.Controllers
 					naziv = x.Naziv
 				}).ToList();
 			return sviZapisi;
+		}
+		[HttpPost]
+		public Spol Add([FromBody] SpolAddVM x)
+		{
+			var novi = new Spol
+			{
+				Naziv = x.Naziv
+			};
+			db.Add(novi);
+			db.SaveChanges();
+			return novi;
 		}
 	}
 }

@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using RentalProperty_.Data;
+using RentalProperty_.Entities.Models;
+using RentalProperty_.Entities.ViewModels;
 
 namespace RentalProperty_.Entities.Controllers
 {
@@ -25,5 +27,50 @@ namespace RentalProperty_.Entities.Controllers
 				}).ToList();
 			return gradovi;
 		}
+		[HttpGet]
+
+		public object GetSaDodatnimParametromIPretragom(string? naziv) 
+		{
+			var sviGradovi = db.Grad.OrderBy(x => x.Naziv)
+				.Where(x => naziv == null || x.Naziv.ToLower().StartsWith(naziv.ToLower()))
+				.Select(x => new GradGetVM
+				{
+					Id = x.ID,
+					Naziv = x.Naziv
+				}
+				).ToList();
+
+			return sviGradovi;
+		}
+
+		[HttpPost]
+
+		public object Add_withParameters(string naziv)
+		{
+			var noviGrad = new Grad
+			{
+				Naziv = naziv
+			};
+
+			db.Add(noviGrad);
+			db.SaveChanges();
+			return noviGrad;
+		}
+
+
+		[HttpPost]
+
+		public Grad Add([FromBody] GradAddVM x)
+		{
+			var noviGrad = new Grad
+			{
+				Naziv = x.Naziv
+			};
+
+			db.Add(noviGrad);
+			db.SaveChanges();
+			return noviGrad;
+		}
+
 	}
 }

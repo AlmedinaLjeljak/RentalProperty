@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using RentalProperty_.Data;
+using RentalProperty_.Entities.Models;
+using RentalProperty_.Entities.ViewModels;
 
 namespace RentalProperty_.Entities.Controllers
 {
@@ -29,6 +31,20 @@ namespace RentalProperty_.Entities.Controllers
 				}).ToList();
 			return sviZapisi;
 		}
-		
+		[HttpPost]
+		public Recenzija Add([FromBody] RecenzijaAddVM x)
+		{
+			var novi = new Recenzija
+			{
+				Ime = x.Ime,
+				Prezime = x.Prezime,
+				Tekst = x.Tekst,
+				Slika = x.Slika
+			};
+			db.Add(novi);
+			db.SaveChanges();
+			return novi;
+
+		}
 	}
 }
