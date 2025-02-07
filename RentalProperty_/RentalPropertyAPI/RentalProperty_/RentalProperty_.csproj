@@ -18,6 +18,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Entities\Endpoint\Korisnik\Edit\" />
+    <Folder Include="Entities\Endpoint\Korisnik\GetAll\" />
+    <Folder Include="Entities\Endpoint\Korisnik\GetById\" />
     <Folder Include="Migrations\" />
     <Folder Include="Configuration\" />
   </ItemGroup>
