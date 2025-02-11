@@ -10,6 +10,6 @@
 		public string BrojTelefona { get; set; }
 		public string NazivGrada { get; set; }
 		public string NazivSpola { get; set; }
-		public string NazivDrzave { get; set; }
+		public string NazivDrzave { get; set; }s
 	}
 }
