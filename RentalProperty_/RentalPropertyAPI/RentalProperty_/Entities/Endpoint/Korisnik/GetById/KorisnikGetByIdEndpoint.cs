@@ -6,7 +6,7 @@ using RentalProperty_.Helper.Auth;
 
 namespace RentalProperty_.Entities.Endpoint.Korisnik.GetById
 {
-	[Route("Korisnik-GetById")]
+	[Microsoft.AspNetCore.Mvc.Route("Korisnik-GetById")]
 	public class KorisnikGetByIdEndpoint:MyBaseEndpoint<int,KorisnikGetByIDResponse>
 	{
 		private readonly DataContext _dataContext;
