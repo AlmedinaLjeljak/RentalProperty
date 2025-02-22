@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Hosting;
 
 using RentalProperty_.Entities.Models;
+using RentalProperty_.Configuration;
 
 namespace RentalProperty_.Data
 {
@@ -29,6 +30,17 @@ namespace RentalProperty_.Data
 
 			modelBuilder.Entity<KorisnikNekretnina>().HasKey(x => new { x.NekretninaId, x.KorisnikId, x.datumIzdavanja });
 
+
+
+
+
+
+			modelBuilder.ApplyConfiguration(new GradConfiguration());
+			modelBuilder.ApplyConfiguration(new DrzavaConfiguration());
+			modelBuilder.ApplyConfiguration(new AdministratorConfiguration());
+			modelBuilder.ApplyConfiguration(new FAQConfiguration());
+			modelBuilder.ApplyConfiguration(new KorisnikConfiguration());
+			modelBuilder.ApplyConfiguration(new SpolConfiguration());
 		}
 
 		public DbSet<Administrator> Administrator { get; set; }
