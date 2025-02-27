@@ -99,6 +99,23 @@ namespace RentalProperty_.Migrations
                     b.HasKey("ID");
 
                     b.ToTable("Drzava");
+
+                    b.HasData(
+                        new
+                        {
+                            ID = 1,
+                            Naziv = "Bosna i Hercegovina"
+                        },
+                        new
+                        {
+                            ID = 2,
+                            Naziv = "Hrvatska"
+                        },
+                        new
+                        {
+                            ID = 3,
+                            Naziv = "Srbija"
+                        });
                 });
 
             modelBuilder.Entity("RentalProperty_.Entities.Models.FAQ", b =>
@@ -120,6 +137,32 @@ namespace RentalProperty_.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("FAQ");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Odgovor = "Cijena zavisi od lokacije i vaseg izbora sta zelite iznajmiti",
+                            Pitanje = "Koja je cijena izdavanja nekretnina?"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Odgovor = "Naravno, nudimo vam na raspolaganje sve agente",
+                            Pitanje = "Da li imate agente koji nam mogu pokazati nekretnine"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Odgovor = "Cijena zavisi od kvadrature zeljene nekretnine",
+                            Pitanje = "Od cega zavisi cijena nekretnine"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Odgovor = "Na svakoj nekrentini je naznaceno da li je nekretninu moguce samo iznajmiti ili cak i kupiti",
+                            Pitanje = "Da li je moguce naznacenu nekretninu i kupiti a ne samo iznajmiti"
+                        });
                 });
 
             modelBuilder.Entity("RentalProperty_.Entities.Models.Grad", b =>
@@ -137,6 +180,58 @@ namespace RentalProperty_.Migrations
                     b.HasKey("ID");
 
                     b.ToTable("Grad");
+
+                    b.HasData(
+                        new
+                        {
+                            ID = 1,
+                            Naziv = "Mostar"
+                        },
+                        new
+                        {
+                            ID = 2,
+                            Naziv = "Sarajevo"
+                        },
+                        new
+                        {
+                            ID = 3,
+                            Naziv = "Zagreb"
+                        },
+                        new
+                        {
+                            ID = 4,
+                            Naziv = "Beograd"
+                        },
+                        new
+                        {
+                            ID = 5,
+                            Naziv = "Konjic"
+                        },
+                        new
+                        {
+                            ID = 6,
+                            Naziv = "Tuzla"
+                        },
+                        new
+                        {
+                            ID = 7,
+                            Naziv = "Zenica"
+                        },
+                        new
+                        {
+                            ID = 8,
+                            Naziv = "Bugojno"
+                        },
+                        new
+                        {
+                            ID = 9,
+                            Naziv = "Bihac"
+                        },
+                        new
+                        {
+                            ID = 10,
+                            Naziv = "Banja Luka"
+                        });
                 });
 
             modelBuilder.Entity("RentalProperty_.Entities.Models.Kategorija", b =>
@@ -318,6 +413,40 @@ namespace RentalProperty_.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Recenzija");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Ime = "Alema",
+                            Prezime = "Duvnjak",
+                            Slika = "assets/1rec.jpg",
+                            Tekst = "Dugo trazenu nekretninu pronasli smo pomocu ove agencije za izdavanje nekretnina. Zadovoljni korisnici. "
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Ime = "Almedina",
+                            Prezime = "Ljeljak",
+                            Slika = "assets/2rec.jpg",
+                            Tekst = "Iznajmljivali smo nekreninu preko ove agencije dugi niz godina,prezadovoljni smo. "
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Ime = "Emina",
+                            Prezime = "Junuz",
+                            Slika = "assets/3rec.jpg",
+                            Tekst = "Zadovoljni korisnici svih usluga koje nudi data agencija za iznajmljivanje."
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Ime = "Iris",
+                            Prezime = "Memic",
+                            Slika = "assets/4rec.jpg",
+                            Tekst = "Usluga je na zadovoljavajucem nivou."
+                        });
                 });
 
             modelBuilder.Entity("RentalProperty_.Entities.Models.Spol", b =>
@@ -335,6 +464,18 @@ namespace RentalProperty_.Migrations
                     b.HasKey("ID");
 
                     b.ToTable("Spol");
+
+                    b.HasData(
+                        new
+                        {
+                            ID = 1,
+                            Naziv = "Zenski"
+                        },
+                        new
+                        {
+                            ID = 2,
+                            Naziv = "Muski"
+                        });
                 });
 
             modelBuilder.Entity("RentalProperty_.Entities.Models.Tfa", b =>
@@ -367,6 +508,26 @@ namespace RentalProperty_.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.ToTable("Administrator");
+
+                    b.HasData(
+                        new
+                        {
+                            ID = 1,
+                            Password = "admin",
+                            Username = "admin",
+                            is2FActive = false,
+                            Ime = "Almedina",
+                            Prezime = "Ljeljak"
+                        },
+                        new
+                        {
+                            ID = 2,
+                            Password = "host",
+                            Username = "host",
+                            is2FActive = false,
+                            Ime = "Alema",
+                            Prezime = "Duvnjak"
+                        });
                 });
 
             modelBuilder.Entity("RentalProperty_.Entities.Models.Korisnik", b =>
@@ -404,6 +565,64 @@ namespace RentalProperty_.Migrations
                     b.HasIndex("SpolID");
 
                     b.ToTable("Korisnik");
+
+                    b.HasData(
+                        new
+                        {
+                            ID = 3,
+                            Password = "almedina123",
+                            Username = "almedinalj",
+                            is2FActive = true,
+                            BrojTelefona = "062123123",
+                            DrazavaID = 1,
+                            GradID = 5,
+                            Ime = "Almedina",
+                            Prezime = "Ljeljak",
+                            Slika = "assets/1korisnik.jpg",
+                            SpolID = 1
+                        },
+                        new
+                        {
+                            ID = 4,
+                            Password = "alema123",
+                            Username = "alemad",
+                            is2FActive = true,
+                            BrojTelefona = "062345678",
+                            DrazavaID = 1,
+                            GradID = 8,
+                            Ime = "Alema",
+                            Prezime = "Duvnjak",
+                            Slika = "assets/2korisnik.jpg",
+                            SpolID = 1
+                        },
+                        new
+                        {
+                            ID = 5,
+                            Password = "adil123",
+                            Username = "adilj",
+                            is2FActive = true,
+                            BrojTelefona = "062897855",
+                            DrazavaID = 2,
+                            GradID = 3,
+                            Ime = "Adil",
+                            Prezime = "Joldic",
+                            Slika = "assets/3korisnik.jpg",
+                            SpolID = 2
+                        },
+                        new
+                        {
+                            ID = 6,
+                            Password = "denis123",
+                            Username = "denism",
+                            is2FActive = true,
+                            BrojTelefona = "061789635",
+                            DrazavaID = 3,
+                            GradID = 4,
+                            Ime = "Denis",
+                            Prezime = "Music",
+                            Slika = "assets/4korisnik.jpg",
+                            SpolID = 2
+                        });
                 });
 
             modelBuilder.Entity("RentalProperty_.Entities.Models.AutentifikacijaToken", b =>

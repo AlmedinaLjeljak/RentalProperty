@@ -3,10 +3,12 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
+#pragma warning disable CA1814 // Prefer jagged arrays over multidimensional
+
 namespace RentalProperty_.Migrations
 {
     /// <inheritdoc />
-    public partial class Initial : Migration
+    public partial class Init : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -310,6 +312,97 @@ namespace RentalProperty_.Migrations
                         column: x => x.NekretninaId,
                         principalTable: "Nekretnina",
                         principalColumn: "Id");
+                });
+
+            migrationBuilder.InsertData(
+                table: "Drzava",
+                columns: new[] { "ID", "Naziv" },
+                values: new object[,]
+                {
+                    { 1, "Bosna i Hercegovina" },
+                    { 2, "Hrvatska" },
+                    { 3, "Srbija" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "FAQ",
+                columns: new[] { "Id", "Odgovor", "Pitanje" },
+                values: new object[,]
+                {
+                    { 1, "Cijena zavisi od lokacije i vaseg izbora sta zelite iznajmiti", "Koja je cijena izdavanja nekretnina?" },
+                    { 2, "Naravno, nudimo vam na raspolaganje sve agente", "Da li imate agente koji nam mogu pokazati nekretnine" },
+                    { 3, "Cijena zavisi od kvadrature zeljene nekretnine", "Od cega zavisi cijena nekretnine" },
+                    { 4, "Na svakoj nekrentini je naznaceno da li je nekretninu moguce samo iznajmiti ili cak i kupiti", "Da li je moguce naznacenu nekretninu i kupiti a ne samo iznajmiti" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Grad",
+                columns: new[] { "ID", "Naziv" },
+                values: new object[,]
+                {
+                    { 1, "Mostar" },
+                    { 2, "Sarajevo" },
+                    { 3, "Zagreb" },
+                    { 4, "Beograd" },
+                    { 5, "Konjic" },
+                    { 6, "Tuzla" },
+                    { 7, "Zenica" },
+                    { 8, "Bugojno" },
+                    { 9, "Bihac" },
+                    { 10, "Banja Luka" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "KorisnickiNalog",
+                columns: new[] { "ID", "Password", "Username", "is2FActive" },
+                values: new object[,]
+                {
+                    { 1, "admin", "admin", false },
+                    { 2, "host", "host", false },
+                    { 3, "almedina123", "almedinalj", true },
+                    { 4, "alema123", "alemad", true },
+                    { 5, "adil123", "adilj", true },
+                    { 6, "denis123", "denism", true }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Recenzija",
+                columns: new[] { "Id", "Ime", "Prezime", "Slika", "Tekst" },
+                values: new object[,]
+                {
+                    { 1, "Alema", "Duvnjak", "assets/1rec.jpg", "Dugo trazenu nekretninu pronasli smo pomocu ove agencije za izdavanje nekretnina. Zadovoljni korisnici. " },
+                    { 2, "Almedina", "Ljeljak", "assets/2rec.jpg", "Iznajmljivali smo nekreninu preko ove agencije dugi niz godina,prezadovoljni smo. " },
+                    { 3, "Emina", "Junuz", "assets/3rec.jpg", "Zadovoljni korisnici svih usluga koje nudi data agencija za iznajmljivanje." },
+                    { 4, "Iris", "Memic", "assets/4rec.jpg", "Usluga je na zadovoljavajucem nivou." }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Spol",
+                columns: new[] { "ID", "Naziv" },
+                values: new object[,]
+                {
+                    { 1, "Zenski" },
+                    { 2, "Muski" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Administrator",
+                columns: new[] { "ID", "Ime", "Prezime" },
+                values: new object[,]
+                {
+                    { 1, "Almedina", "Ljeljak" },
+                    { 2, "Alema", "Duvnjak" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Korisnik",
+                columns: new[] { "ID", "BrojTelefona", "DrazavaID", "GradID", "Ime", "Prezime", "Slika", "SpolID" },
+                values: new object[,]
+                {
+                    { 3, "062123123", 1, 5, "Almedina", "Ljeljak", "assets/1korisnik.jpg", 1 },
+                    { 4, "062345678", 1, 8, "Alema", "Duvnjak", "assets/2korisnik.jpg", 1 },
+                    { 5, "062897855", 2, 3, "Adil", "Joldic", "assets/3korisnik.jpg", 2 },
+                    { 6, "061789635", 3, 4, "Denis", "Music", "assets/4korisnik.jpg", 2 }
                 });
 
             migrationBuilder.CreateIndex(

@@ -41,6 +41,7 @@ namespace RentalProperty_.Data
 			modelBuilder.ApplyConfiguration(new FAQConfiguration());
 			modelBuilder.ApplyConfiguration(new KorisnikConfiguration());
 			modelBuilder.ApplyConfiguration(new SpolConfiguration());
+			modelBuilder.ApplyConfiguration(new RecenzijaConfiguration());
 		}
 
 		public DbSet<Administrator> Administrator { get; set; }
