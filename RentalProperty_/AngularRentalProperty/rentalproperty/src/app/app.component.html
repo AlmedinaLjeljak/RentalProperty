@@ -1,52 +1,49 @@
-
-
-
 <!-- Navigacija -->
 <nav class="navbar navbar-expand-md navbar-light m-1">
   <div class="container-xxl">
 
     <!-- Logo i brand tekst -->
-    <a id="logo" class="mx-3" >
-      <img src="/assets/rent.jpg" class="img-fluid sm" alt="logo" routerLink='/HomePage'>
+    <a id="logo" class="mx-3" routerLink="/HomePage">
+      <img src="/assets/rent.jpg" class="img-fluid sm" alt="Rental Property Logo">
     </a>
 
-    <a class="navbar-brand" >
-        <span class="text-secondary fw-bold" routerLink='/HomePage'>
-          Rental Property
-        </span>
+    <a class="navbar-brand text-secondary fw-bold" routerLink="/HomePage">
+      Rental Property
     </a>
 
-    <!-- smanjivanje za mobilni pogled -->
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav" >
+    <!-- Toggler dugme za mobilne uređaje -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <!-- Navigacijski page-ovi -->
-    <div class="collapse navbar-collapse justify-content-end align-center " id="main-nav">
+    <!-- Navigacijski meni -->
+    <div class="collapse navbar-collapse justify-content-end align-items-center" id="main-nav">
       <ul class="navbar-nav">
 
         <li class="nav-item mx-2" *ngIf="MyAuthService.isAdmin()">
-          <a class="nav-link" routerLink='/AdministratorPage'>Administrator</a>
+          <a class="nav-link" routerLink="/AdministratorPage">Administrator</a>
         </li>
 
         <li class="nav-item mx-2" *ngIf="MyAuthService.isKorisnik()">
-          <a class="nav-link"  routerLink='/KorisnikPage'>Korisnik</a>
+          <a class="nav-link" routerLink="/KorisnikPage">Korisnik</a>
         </li>
 
         <li class="nav-item mx-2">
-          <a class="nav-link" routerLink='/OsobljePage'>Osoblje</a>
+          <a class="nav-link" routerLink="/OsobljePage">Osoblje</a>
         </li>
         <li class="nav-item mx-2">
-          <a class="nav-link" routerLink='/SuplementiPage'>Suplementi</a>
+          <a class="nav-link" routerLink="/SuplementiPage">Suplementi</a>
         </li>
         <li class="nav-item mx-2">
-          <a class="nav-link" routerLink='/FAQPage'>FAQ</a>
+          <a class="nav-link" routerLink="/FAQPage">FAQ</a>
         </li>
+
         <li class="nav-item mx-2" *ngIf="MyAuthService.nijelLogiran()">
-          <a class="nav-link"  routerLink='/LoginPage'>Prijava</a>
+          <a class="nav-link" routerLink="/LoginPage">Prijava</a>
         </li>
+
         <li class="nav-item mx-2" *ngIf="MyAuthService.jelLogiran()">
-          <a class="nav-link" (click)="Logout()" >Odjava</a>
+          <a class="nav-link text-danger" (click)="Logout()">Odjava</a>
         </li>
 
       </ul>
@@ -54,9 +51,7 @@
   </div>
 </nav>
 
-
-<div >
+<!-- Glavni sadržaj -->
+<div>
   <router-outlet></router-outlet>
 </div>
-
-

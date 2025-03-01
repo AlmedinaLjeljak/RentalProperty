@@ -1,1 +1,179 @@
-<p>home-page works!</p>
+<div id="Content-HomePage">
+
+
+    <!-- Suplement prodaja -->
+    <section id="intro">
+      <div class="container-lg">
+        <div class="row g-4 justify-content-center align-items-center">
+          <div class="col-md-6 text-center text-md-start">
+            <h1>
+              <!-- Tekst -->
+              <div class="display-2">Power Reactor</div>
+              <div class="display-6 text-muted">Preworkout - Muscle Freak</div>
+            </h1>
+            <p class="lead my-4 text-muted">Muscle Freak Power Reactor je visokokvalitetni pre-workout, koji smo kreirali kako bi zadovoljili potrebe i najzahtjevnijih vježbača.</p>
+            <a class="btn btn-danger btn-lg" routerLink='/SuplementiPage'>
+              Kupite sada</a>
+          </div>
+  
+          <!-- Slika -->
+          <div class="col-md-5 text-center d-none d-md-block">
+            <img src="/assets/13sup.webp" class="img-fluid rounded w-50" alt="ebook">
+          </div>
+        </div>
+      </div>
+    </section>
+  
+  
+    <section id="clanarine" class="bg-light mt-5">
+      <div class="container-lg">
+        <div class="text-center">
+          <h2>Cjenovnik članarina</h2>
+        </div>
+  
+        <div class="row my-5 g-0 align-items-center justify-content-center">
+          <div class="col-8 col-lg-4 col-xl-3">
+            <div class="card border-0">
+              <div class="card-body text-center py-4">
+                <h4 class="card-title">{{clanarine[0].naziv}}</h4>
+                <p class="display-5 my-4 text-primary fw-bold">{{clanarine[0].cijena}} KM</p>
+                <p class="card-text mx-3 text-muted d-none d-lg-block">{{clanarine[0].opis}}</p>
+  
+  
+              </div>
+            </div>
+          </div>
+  
+          <div class="col-9 col-lg-4">
+            <div class="card border-primary border-2">
+              <div class="card-header text-center text-primary">Najpopularnija</div>
+              <div class="card-body text-center py-5">
+                <h4 class="card-title">{{clanarine[1].naziv}}</h4>
+                <p class="display-4 my-4 text-primary fw-bold">{{clanarine[1].cijena}} KM</p>
+                <p class="card-text mx-3 text-muted d-none d-lg-block">{{clanarine[1].opis}}</p>
+  
+  
+              </div>
+            </div>
+          </div>
+  
+          <div class="col-8 col-lg-4 col-xl-3">
+            <div class="card border-0">
+              <div class="card-body text-center py-4">
+                <h4 class="card-title">{{clanarine[2].naziv}}</h4>
+                <p class="display-5 my-4 text-primary fw-bold">{{clanarine[2].cijena}} KM</p>
+                <p class="card-text mx-3 text-muted d-none d-lg-block">{{clanarine[2].opis}}</p>
+  
+  
+              </div>
+            </div>
+          </div>
+        </div>
+  
+      </div><!-- kraj sekcije za clanarine -->
+    </section>
+  
+  
+    <!-- Recenzije -->
+    <section id="recenzije" class="mt-5">
+      <div class="container-lg mb-5 align-items-center justify-content-center">
+        <div class="text-center">
+          <h2>Recenzije</h2>
+        </div>
+      </div>
+      <!-- Kretanje slidera -->
+      <div id="hero" class="carousel slide">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#hero" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#hero" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#hero" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#hero" data-bs-slide-to="3" aria-label="Slide 4"></button>
+        </div>
+  
+        <!-- Itemi recenzije -->
+        <div  class="carousel-inner">
+          <div  class="carousel-item active">
+            <img  src="{{recenzije[0].slika}}" class="d-block w-100" alt="banner 1" />
+            <div class="carousel-caption d-lg-block bg-dark rounded p-3">
+              <h3 id="nurk">{{recenzije[0].ime}} {{recenzije[0].prezime}}</h3>
+              <p class="d-none d-lg-block">
+                {{recenzije[0].tekst}}
+              </p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img  src="{{recenzije[1].slika}}" class="d-block w-100" alt="banner 2" />
+            <div class="carousel-caption d-lg-block bg-dark rounded p-3">
+              <h3>{{recenzije[1].ime}} {{recenzije[1].prezime}}</h3>
+              <p class="d-none d-lg-block">
+                {{recenzije[1].tekst}}
+              </p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="{{recenzije[2].slika}}" class="d-block w-100" alt="banner 3" />
+            <div class="carousel-caption d-lg-block bg-dark rounded p-3">
+              <h3>{{recenzije[2].ime}} {{recenzije[2].prezime}}</h3>
+              <p class="d-none d-lg-block">
+                {{recenzije[2].tekst}}
+              </p>
+            </div>
+          </div>
+  
+          <div class="carousel-item">
+            <img  src="{{recenzije[3].slika}}" class="d-block w-100" alt="banner 2" />
+            <div class="carousel-caption d-lg-block bg-dark rounded p-3">
+              <h3>{{recenzije[3].ime}} {{recenzije[3].prezime}}</h3>
+              <p class="d-none d-lg-block">
+                {{recenzije[3].tekst}}
+              </p>
+            </div>
+          </div>
+  
+  
+        </div>
+      </div>
+  
+    </section>
+  
+  
+  
+    <!-- Google Maps lokacija-->
+  
+    <section id="GoogleMaps" class="bg-light mt-5 ">
+      <div class="container-lg mb-5 align-items-center justify-content-center">
+        <div class="text-center">
+          <h2>Naša lokacija</h2>
+        </div>
+      </div>
+  
+      <div>
+        <iframe class="my-3"
+                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d531.6694577124298!2d17.815428252460965!3d43.35516041944839!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sba!4v1699577368567!5m2!1sen!2sba"
+                width="100%"
+                height="350"
+        ></iframe>
+      </div>
+    </section>
+  
+  
+  
+  
+  
+  
+    <!-- Footer  -->
+  
+    <footer id="footer ">
+      <div class="container-fluid bg-dark text-light">
+  
+        <div class="row py-1 text-center">
+          <p class="m-0">Copyright &copy; 2023. All rights reserved. Gym Management System</p>
+        </div>
+  
+      </div>
+    </footer>
+  
+  
+    <!--  Kraj homepage sekcije -->
+  </div>
+  

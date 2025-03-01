@@ -1,0 +1,12 @@
+section{
+    padding: 60px 0;
+  }
+  a{
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  .carousel-caption{
+    opacity: 75%;
+  }
+  

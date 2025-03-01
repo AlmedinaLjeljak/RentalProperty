@@ -1,1 +1,33 @@
-<p>login-page works!</p>
+<section id="login">
+
+    <!-- popup ako niste prijavljeni -->
+  
+    <div class="d-flex align-items-center justify-content-center" *ngIf="ErrorPopUp" >
+      <div class="alert alert-danger alert-dismissible fade show w-50" role="alert" >
+        Neispravni pristupni podaci!
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" (click)="ZatvoriPopUp()">
+        </button>
+      </div>
+    </div>
+  
+    <div class="text-center d-flex justify-content-around align-items-center m-5">
+      <form class="form-signin">
+        <img class="mb-4" src="assets/login.png" alt="" width="100" height="100">
+        <h1 class="h3 mb-3 font-weight-normal">Prijava</h1>
+  
+        <input type="text" id="inputUsername" class="form-control my-2" placeholder="Korisničko ime" required="" autofocus=""  [ngModelOptions]="{standalone: true}" [(ngModel)]="LoginRequest.username">
+  
+        <input type="password" id="inputPassword" class="form-control my-2" placeholder="Lozinka" required=""  [ngModelOptions]="{standalone: true}" [(ngModel)]="LoginRequest.password">
+        <div class="checkbox mb-3">
+  
+          <button class="btn btn-lg btn-danger btn-block w-100 mt-3" type="submit" (click)="SignIn()">Prijavi se</button>
+          <label class="my-2">
+            <input  type="checkbox" value="remember-me"> Zapamti me
+          </label>
+        </div>
+      </form>
+  
+  
+    </div>
+  </section>
+  
