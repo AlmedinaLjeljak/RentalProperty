@@ -9,4 +9,11 @@ section{
   .carousel-caption{
     opacity: 75%;
   }
+  .carousel-item img {
+    max-width: 600px;
+    max-height: 300px;
+    object-fit: cover;
+    margin-left: 10px; 
+    display: block;
+  }
   

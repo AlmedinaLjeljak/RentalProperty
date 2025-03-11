@@ -8,7 +8,7 @@ import {Config} from "../../config";
 export class RecenzijaAddEndpoint implements  MyBaseEndpoint<RecenzijaAddRequest, void>{
   constructor(public httpClient:HttpClient) { }
   Handle(request: RecenzijaAddRequest): Observable<void> {
-    let url=Config.adresa + `Recenzija-Add`;
+    let url=Config.adresa + `Recednzija-Add`;
 
     return this.httpClient.post<void>(url, request);
   }
