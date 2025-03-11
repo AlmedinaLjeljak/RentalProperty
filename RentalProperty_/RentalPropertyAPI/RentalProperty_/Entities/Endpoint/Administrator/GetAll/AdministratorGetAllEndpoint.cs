@@ -15,7 +15,7 @@ namespace RentalProperty_.Entities.Endpoint.Administrator.GetAll
 			this.db = db;
 		}
 		[HttpGet]
-		public override async Task<AdministratorGetAllResponse> Handle([FromBody]AdministratorGetAllRequest request,CancellationToken cancellationToken)
+		public override async Task<AdministratorGetAllResponse> Handle([FromQuery]AdministratorGetAllRequest request,CancellationToken cancellationToken)
 		{
 			var administrator = await db.Administrator
 				.Select(x => new AdministratorGetAllResponseRow

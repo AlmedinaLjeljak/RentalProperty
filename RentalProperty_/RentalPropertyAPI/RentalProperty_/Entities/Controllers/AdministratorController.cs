@@ -15,7 +15,7 @@ namespace RentalProperty_.Entities.Controllers
 			db = dbContext;
 		}
 		[HttpGet]
-		public object GetAll()
+		/*public object GetAll()
 		{
 			var zapisi = db.KorisnikAgent
 				.Select(x => new
@@ -24,6 +24,19 @@ namespace RentalProperty_.Entities.Controllers
 					agentId = x.AgentId,
 					datumTermina = x.DatumTermina,
 					vrijemeSati = x.VrijemeSat
+				}).ToList();
+			return zapisi;
+		}*/
+		public object GetAll()
+		{
+			var zapisi = db.Administrator
+				.Select(x => new
+				{
+					Id = x.ID,
+					Username = x.Username,
+					Password = x.Password,
+					Ime = x.Ime,
+					Prezime = x.Prezime
 				}).ToList();
 			return zapisi;
 		}

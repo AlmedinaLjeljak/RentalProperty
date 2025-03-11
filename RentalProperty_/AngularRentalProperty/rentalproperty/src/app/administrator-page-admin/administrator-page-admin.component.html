@@ -1,1 +1,138 @@
-<p>administrator-page-admin works!</p>
+<section id="adminadmin">
+    <div class="container-md">
+  
+      <!--  Back button i Tekst-->
+      <div class="row">
+        <div class="col-3">
+          <button type="button" routerLink='/AdministratorPage' class="btn btn-outline-danger">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-return-left" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M14.5 1.5a.5.5 0 0 1 .5.5v4.8a2.5 2.5 0 0 1-2.5 2.5H2.707l3.347 3.346a.5.5 0 0 1-.708.708l-4.2-4.2a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 8.3H12.5A1.5 1.5 0 0 0 14 6.8V2a.5.5 0 0 1 .5-.5"></path>
+            </svg>
+            Nazad
+          </button>
+          <button type="button" class="btn btn-outline-primary mx-2" (click)="prikaziAdd = !prikaziAdd">Dodaj admina</button>
+        </div>
+        <div class="col-6">
+          <div class="text-center">
+            <h2>Konfiguracija administratora</h2>
+          </div>
+        </div>
+      </div>
+  
+  
+      <!-- Pretraga po nazivu-->
+      <div class="row my-5 d-flex justify-content-center" >
+        <div class="col-6">
+          <input type="text" spellcheck="false" placeholder="Pretražite po imenu, prezimenu ili username-u" class="form-control secondary" [(ngModel)]="PretragaNaziv">
+        </div>
+      </div>
+  
+  
+      <div class="container-sm w-75" >
+  
+  
+        <!-- div za add -->
+  
+  
+        <div class="border rounded px-4 py-3" *ngIf="prikaziAdd">
+  
+          <div class="d-flex justify-content-end">
+            <button type="button" class="btn-close" (click)="prikaziAdd = !prikaziAdd"></button>
+          </div>
+  
+          <div>
+            <label> Ime: </label>
+            <input type="text" class="form-control mb-2" [(ngModel)]="noviAdmin.ime" required>
+          </div>
+  
+          <div>
+            <label> Prezime: </label>
+            <input type="text" class="form-control mb-2" [(ngModel)]="noviAdmin.prezime" required>
+          </div>
+  
+          <div>
+            <label> Username: </label>
+            <input type="text" class="form-control mb-2" [(ngModel)]="noviAdmin.username" required>
+          </div>
+  
+          <div>
+            <label> Password: </label>
+            <input type="password" class="form-control mb-2" [(ngModel)]="noviAdmin.password" required>
+          </div>
+  
+          <div class="d-flex justify-content-end">
+            <button type="submit" class="btn btn-primary mt-2" (click)="SaveNew()">Dodaj administratora</button>
+          </div>
+  
+        </div>
+  
+        <!-- div za edit -->
+  
+  
+        <div class="border rounded px-4 py-3" *ngIf="odabraniAdmin">
+  
+          <div class="d-flex justify-content-end">
+            <button type="button" (click)="Close()" class="btn-close"></button>
+          </div>
+  
+  
+          <div>
+            <label> ID: </label>
+            <input type="text" class="form-control mb-2" [value]="odabraniAdmin.id" disabled>
+          </div>
+  
+          <div>
+            <label> Ime: </label>
+            <input type="text" class="form-control mb-2" [(ngModel)]="odabraniAdmin.ime">
+          </div>
+  
+          <div>
+            <label> Prezime: </label>
+            <input type="text" class="form-control mb-2" [(ngModel)]="odabraniAdmin.prezime">
+          </div>
+  
+          <div>
+            <label> Username: </label>
+            <input type="text" class="form-control mb-2" [(ngModel)]="odabraniAdmin.username">
+          </div>
+  
+          <div>
+            <label> Password: </label>
+            <input type="text" class="form-control mb-2" [(ngModel)]="odabraniAdmin.password">
+          </div>
+  
+  
+          <div class="d-flex justify-content-end">
+            <button type="submit" class="btn btn-danger mt-2" (click)="Save()">Spasi promjene</button>
+          </div>
+  
+        </div>
+  
+  
+        <!-- tabela -->
+  
+      <table class="table table-striped">
+        <thead>
+        <tr>
+          <th>Ime</th>
+          <th>Prezime</th>
+          <th>Username</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let x of GetFiltiraniAdministratori()">
+          <td class="w-25">{{ x.ime }}</td>
+          <td class="w-25">{{ x.prezime }}</td>
+          <td class="w-50">{{ x.username }}</td>
+          <td>
+            <button type="button" class="btn btn-danger" (click)="Odaberi(x)">Modifikuj</button>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+  
+  
+    </div>
+    </div>
+  </section>
+  

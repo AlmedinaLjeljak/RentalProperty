@@ -1,0 +1,57 @@
+section{
+    padding: 30px 0;
+  }
+  
+  .popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    z-index: 1000;
+  }
+  
+  .popup.uspjesno {
+    background-color: #4CAF50;
+    color: white;
+    display:block;
+    width:40%;
+  }
+  
+  .popup.neuspjesno {
+    background-color: #f44336;
+    color: white;
+    display:block;
+    width: 40%;
+  }
+  
+  @keyframes showDots {
+    0%, 20% {
+      content: '.';
+    }
+    20%, 40% {
+      content: '..';
+    }
+    40%, 60% {
+      content: '...';
+    }
+    60%, 80% {
+      content: '....';
+  }
+    80%, 100% {
+    content: '.....';
+  }
+    }
+  
+  .show-dots::after {
+    content: '';
+    display: inline-block;
+    font-size: 1.5em;
+    white-space: nowrap;
+    animation: showDots 1.5s infinite steps(1);
+  }
+  
