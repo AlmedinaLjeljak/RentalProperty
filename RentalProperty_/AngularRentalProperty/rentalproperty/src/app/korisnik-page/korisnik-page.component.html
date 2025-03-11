@@ -1,1 +1,59 @@
-<p>korisnik-page works!</p>
+<section id="korisnik" style="background-color: #eee;">
+    <div class="container py-5">
+  
+  
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="card mb-4">
+            <div class="card-body text-center">
+              <img src="{{odabraniKorisnik?.slika}}" alt="avatar"
+                   class="rounded-circle img-fluid" style="width: 180px;">
+              <h4 class="my-3">{{odabraniKorisnik?.ime}} {{odabraniKorisnik?.prezime}}</h4>
+              <p class="text-muted mb-1">{{odabraniKorisnik?.username}}</p>
+              <p class="text-muted mb-4">{{odabraniKorisnik?.nazivGrada}}</p>
+  
+            </div>
+          </div>
+  
+  
+        </div>
+        <div class="col-lg-8">
+          <div class="card mb-4">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-sm-3">
+                  <p class="mb-0">Ime i prezime</p>
+                </div>
+                <div class="col-sm-9">
+                  <p class="text-muted mb-0">{{odabraniKorisnik?.ime}} {{odabraniKorisnik?.prezime}}</p>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-3">
+                  <p class="mb-0">Broj telefona</p>
+                </div>
+                <div class="col-sm-9">
+                  <p class="text-muted mb-0">{{odabraniKorisnik?.brojTelefona}}</p>
+                </div>
+              </div>
+             
+              <div class="row">
+                <div class="col-sm-3">
+                  <p class="mb-0">Spol</p>
+                </div>
+                <div class="col-sm-9">
+                  <p class="text-muted mb-0">{{odabraniKorisnik?.nazivSpola}}</p>
+                </div>
+              </div>
+              <hr>
+  
+             
+  
+  
+            </div>
+          </div>
+        </div>
+  
+  
+  

@@ -1,1 +1,154 @@
-<p>administrator-page-recenzije works!</p>
+<section id="adminrecenzije">
+    <div class="container-md">
+  
+      <!--  Back button i Tekst-->
+      <div class="row">
+        <div class="col-3">
+          <button type="button" routerLink='/AdministratorPage' class="btn btn-outline-danger">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-return-left" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M14.5 1.5a.5.5 0 0 1 .5.5v4.8a2.5 2.5 0 0 1-2.5 2.5H2.707l3.347 3.346a.5.5 0 0 1-.708.708l-4.2-4.2a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 8.3H12.5A1.5 1.5 0 0 0 14 6.8V2a.5.5 0 0 1 .5-.5"></path>
+            </svg>
+            Nazad
+          </button>
+          <button type="button" class="btn btn-outline-primary mx-2" (click)="prikaziAdd = !prikaziAdd">Dodaj recenziju</button>
+        </div>
+        <div class="col-6">
+          <div class="text-center">
+            <h2>Konfiguracija recenzija</h2>
+          </div>
+        </div>
+      </div>
+  
+      <!-- div za edit -->
+  
+      <div class="container-sm w-50" >
+  
+        <div class="border rounded px-4 py-3" *ngIf="odabranaRecenzija">
+  
+          <div class="d-flex justify-content-end">
+            <button type="button" (click)="Close()" class="btn-close"></button>
+          </div>
+  
+  
+          <div>
+            <label> ID: </label>
+            <input type="text" class="form-control mb-2" [value]="odabranaRecenzija.id" disabled>
+          </div>
+  
+  
+          <div>
+            <label> Slika: </label>
+            <input id="slika-input-edit" type="file" class="form-control" accept="image/*" (change)="PreviewEdit()" [(ngModel)]="odabranaRecenzija.slika" required>
+            <img class="rounded mx-auto d-block my-2 img-fluid img-thumbnail" style="max-width: 100%; height: 200px" src="{{this.odabranaRecenzija?.slika}}" >
+          </div>
+  
+  
+          <div>
+            <label> Ime: </label>
+            <input type="text" class="form-control mb-2" [(ngModel)]="odabranaRecenzija.ime">
+          </div>
+  
+          <div>
+            <label> Prezime: </label>
+            <input type="text" class="form-control mb-2" [(ngModel)]="odabranaRecenzija.prezime">
+          </div>
+  
+          <div>
+            <label> Tekst: </label>
+            <input type="text" class="form-control mb-2" [(ngModel)]="odabranaRecenzija.tekst">
+          </div>
+  
+  
+  
+  
+          <div class="d-flex justify-content-end">
+            <button type="submit" class="btn btn-danger mt-2" (click)="Save()">Spasi promjene</button>
+          </div>
+  
+        </div>
+  
+        <!-- div za add -->
+  
+  
+  
+        <div class="border rounded px-4 py-3" *ngIf="prikaziAdd">
+  
+          <div class="d-flex justify-content-end">
+            <button type="button" class="btn-close" (click)="prikaziAdd = !prikaziAdd"></button>
+          </div>
+  
+          <div>
+            <label> Slika: </label>
+            <input id="slika-input" type="file" class="form-control" accept="image/*" (change)="Preview()" [(ngModel)]="novaRecenzija.slika" required>
+            <img class="rounded mx-auto d-block my-2 img-fluid img-thumbnail" style="max-width: 100%; height: 200px" src="{{this.novaRecenzija.slika}}" >
+          </div>
+  
+          <div>
+            <label> Ime: </label>
+            <input type="text" class="form-control mb-2" [(ngModel)]="novaRecenzija.ime" required>
+          </div>
+  
+          <div>
+            <label> Prezime: </label>
+            <input type="text" class="form-control mb-2" [(ngModel)]="novaRecenzija.prezime" required>
+          </div>
+  
+  
+          <div>
+            <label> Tekst: </label>
+            <input type="text" class="form-control mb-2" [(ngModel)]="novaRecenzija.tekst" required>
+          </div>
+  
+          <div class="d-flex justify-content-end">
+            <button type="submit" class="btn btn-primary mt-2" (click)="SaveNew()">Dodaj recenziju</button>
+          </div>
+  
+        </div>
+      </div>
+  
+  
+  
+  
+  
+  
+  
+      <!-- Pretraga po imenu-->
+      <div class="row my-5 d-flex justify-content-center" >
+        <div class="col-6">
+          <input type="text" spellcheck="false" placeholder="Pretražite po imenu i prezimenu" class="form-control secondary" [(ngModel)]="PretragaNaziv">
+        </div>
+      </div>
+  
+      <!-- tabela -->
+  
+      <table class="table table-striped">
+        <thead>
+        <tr>
+          <th>Slika</th>
+          <th>Ime</th>
+          <th>Prezime</th>
+          <th>Tekst</th>
+  
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let x of GetFiltiraneRecenzije()">
+          <td>
+            <img class="slike" src="{{x.slika}}">
+          </td>
+          <td>{{ x.ime}}</td>
+          <td>{{x.prezime}}</td>
+          <td>{{ x.tekst }}</td>
+  
+          <td>
+            <button type="button" class="btn btn-danger" (click)="Odaberi(x)">Modifikuj</button>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+  
+  
+  
+    </div>
+  </section>
+  

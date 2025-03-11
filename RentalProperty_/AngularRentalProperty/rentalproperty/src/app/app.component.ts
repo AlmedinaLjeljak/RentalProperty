@@ -13,7 +13,7 @@ import {MyAuthService} from "./services/MyAuthService";
 export class AppComponent implements OnInit{
 
   constructor(public router:Router, public httpClient: HttpClient,public MyAuthService : MyAuthService) {
-    // this.router.navigate(['/HomePage']);
+    this.router.navigate(['/HomePage']);
 
   }
 

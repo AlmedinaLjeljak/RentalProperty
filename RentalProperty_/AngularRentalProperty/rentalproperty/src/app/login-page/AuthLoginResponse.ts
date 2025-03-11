@@ -1,4 +1,4 @@
-import {AutentifikacijaToken} from "../helpers/auth/AutentifikacijaToken";
+import {AutentifikacijaToken} from "../helpers/AutentifikacijaToken";
 
 export interface AuthLoginResponse {
   autentifikacijaToken: AutentifikacijaToken

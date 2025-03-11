@@ -1,6 +1,6 @@
 export class Config{
     // ---> za IIS Express
-    static adresa ="https://localhost:59021/";
+    static adresa ="http://localhost:59021/";
   
     
   }

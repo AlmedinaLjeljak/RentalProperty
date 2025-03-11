@@ -2,7 +2,7 @@
 {
 	public class RecenzijaGetallResponse
 	{
-		public List<RecenzijaGetallResponse> Recenzije { get; set; }
+		public List<RecenzijaGetallResponseRow> Recenzije { get; set; }
 	}
 
 	public class RecenzijaGetallResponseRow

@@ -1,14 +1,11 @@
 <!-- Navigacija -->
-<nav class="navbar navbar-expand-md navbar-light m-1">
+<nav class="navbar navbar-expand-md navbar-light bg-light shadow-sm p-2">
   <div class="container-xxl">
 
     <!-- Logo i brand tekst -->
-    <a id="logo" class="mx-3" routerLink="/HomePage">
-      <img src="/assets/rent.jpg" class="img-fluid sm" alt="Rental Property Logo">
-    </a>
-
-    <a class="navbar-brand text-secondary fw-bold" routerLink="/HomePage">
-      Rental Property
+    <a id="logo" class="mx-3 d-flex align-items-center" routerLink="/HomePage">
+      <img src="/assets/rent.jpg" class="img-fluid" alt="Rental Property Logo" style="width: 50px; height: 50px; border-radius: 10px;">
+      <span class="navbar-brand ms-2 text-secondary fw-bold fs-5">Rental Property</span>
     </a>
 
     <!-- Toggler dugme za mobilne uređaje -->
@@ -31,9 +28,7 @@
         <li class="nav-item mx-2">
           <a class="nav-link" routerLink="/OsobljePage">Osoblje</a>
         </li>
-        <li class="nav-item mx-2">
-          <a class="nav-link" routerLink="/SuplementiPage">Suplementi</a>
-        </li>
+
         <li class="nav-item mx-2">
           <a class="nav-link" routerLink="/FAQPage">FAQ</a>
         </li>
@@ -43,7 +38,7 @@
         </li>
 
         <li class="nav-item mx-2" *ngIf="MyAuthService.jelLogiran()">
-          <a class="nav-link text-danger" (click)="Logout()">Odjava</a>
+          <a class="nav-link text-danger fw-bold" (click)="Logout()">Odjava</a>
         </li>
 
       </ul>
@@ -52,6 +47,19 @@
 </nav>
 
 <!-- Glavni sadržaj -->
-<div>
+<div class="container mt-4">
   <router-outlet></router-outlet>
 </div>
+
+<!-- Stilovi -->
+<style>
+  .nav-link {
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+  }
+
+  .nav-link:hover {
+    color: #007bff;
+    font-weight: bold;
+  }
+</style>

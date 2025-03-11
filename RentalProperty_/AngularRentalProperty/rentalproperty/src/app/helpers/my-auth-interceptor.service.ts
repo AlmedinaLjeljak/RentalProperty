@@ -1,7 +1,7 @@
 
 import {Injectable} from "@angular/core";
 import {HttpHandler, HttpInterceptor, HttpRequest} from "@angular/common/http";
-import {MyAuthService} from "../../services/MyAuthService";
+import {MyAuthService} from "../services/MyAuthService";
 
 
 @Injectable()
