@@ -1,44 +1,68 @@
-/* Raspored svih stavki u navbar-u u horizontalnom redu */
+
 .navbar-nav {
   display: flex;
-  justify-content: center; /* Poravnaj sve stavke u sredinu */
-  align-items: center; /* Vertikalno poravnanje */
-  width: 100%; /* Postavi širinu na 100% da bi se stavke ravnomerno rasporedile */
+  justify-content: center; 
+  align-items: center; 
+  width: 100%; 
 }
 
 .nav-item {
-  margin: 0 15px; /* Dodaj horizontalni razmak između stavki */
+  margin: 0 15px; 
 }
 
-/* Stilizovanje linkova u navbar-u */
+
 .nav-link {
   font-size: 1.1rem;
   transition: color 0.3s ease;
-  color: #333; /* Standardna boja za tekst */
+  color: #333; 
 }
 
 .nav-link:hover {
-  color: #007bff; /* Boja pri hover-u */
+  color: #007bff; 
   font-weight: bold;
 }
 
-/* Stil za dugme Odjava */
 .nav-link.text-danger {
-  color: #dc3545; /* Crvena boja za Odjava */
+  color: #dc3545; 
 }
 
 .nav-link.text-danger:hover {
-  color: #ff6f6f; /* Svetlija crvena pri hover-u */
+  color: #ff6f6f; 
 }
 
-/* Prilagodba za mobilne uređaje - stavke i dugme za menij */
+
 @media (max-width: 768px) {
   .navbar-nav {
-    flex-direction: column; /* Na manjim ekranima, stavke se prikazuju u vertikalnom redu */
-    align-items: flex-start; /* Poravnaj stavke sa početkom */
+    flex-direction: column; 
+    align-items: flex-start; 
   }
 
   .nav-item {
-    margin: 10px 0; /* Dodaj vertikalni razmak između stavki */
+    margin: 10px 0; 
   }
+}
+/* Stil za pozadinsku sliku sekcije */
+#pozadina {
+  background-image: url('/assets/pozadina.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 100vh; /* 100vh znači da sekcija zauzima celu visinu ekrana */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Naslovi i tekst unutar pozadinske slike */
+#pozadina h2 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+#pozadina p {
+  font-size: 1.25rem;
+  max-width: 700px;
+  margin: 0 auto;
 }

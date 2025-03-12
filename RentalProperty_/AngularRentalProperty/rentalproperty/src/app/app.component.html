@@ -1,7 +1,6 @@
 <!-- Navigacija -->
 <nav class="navbar navbar-expand-md navbar-light bg-light shadow-sm p-2">
   <div class="container-xxl">
-
     <!-- Logo i brand tekst -->
     <a id="logo" class="mx-3 d-flex align-items-center" routerLink="/HomePage">
       <img src="/assets/rent.jpg" class="img-fluid" alt="Rental Property Logo" style="width: 50px; height: 50px; border-radius: 10px;">
@@ -52,20 +51,15 @@
   </div>
 </nav>
 
+<!-- Nova sekcija s pozadinskom slikom -->
+<section id="pozadina" class="w-100">
+  <div class="container">
+    <h2 class="text-center text-light mt-5">Dobrodošli u Rental Property</h2>
+    <p class="text-center text-light">Ovdje možete pregledati naše nekretnine, agente i sve važno za vaš sledeći korak u pronalaženju savršenog prostora!</p>
+  </div>
+</section>
+
 <!-- Glavni sadržaj -->
 <div class="container mt-4">
   <router-outlet></router-outlet>
 </div>
-
-<!-- Stilovi -->
-<style>
-  .nav-link {
-    font-size: 1.1rem;
-    transition: color 0.3s ease;
-  }
-
-  .nav-link:hover {
-    color: #007bff;
-    font-weight: bold;
-  }
-</style>
