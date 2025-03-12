@@ -85,7 +85,7 @@
                 </select>
               </div>
               <div>
-                <label class="form-label"> Drzava prebivališta: </label>
+                <label class="form-label"> Drzava: </label>
                 <select class="form-select" [(ngModel)]="odabraniKorisnik.drzavaID">
                   <option *ngFor="let x of drzave" [value]="x.id">{{x.naziv}}</option>
                 </select>
@@ -173,7 +173,7 @@
               </select>
             </div>
             <div>
-                <label class="form-label"> Drzava prebivališta: </label>
+                <label class="form-label"> Drzava: </label>
                 <select class="form-select" [(ngModel)]="noviKorisnik.drzavaID">
                   <option *ngFor="let x of drzave" [value]="x.id">{{x.naziv}}</option>
                 </select>

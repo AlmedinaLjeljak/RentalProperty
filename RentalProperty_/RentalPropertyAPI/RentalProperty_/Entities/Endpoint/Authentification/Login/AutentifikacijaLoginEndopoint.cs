@@ -24,14 +24,14 @@ namespace RentalProperty_.Entities.Endpoint.Authentification.Login
 		[HttpPost("Login")]
 		public override async Task<MyAuthInfo> Handle([FromBody] AutentifikacijaLoginRequest request, CancellationToken cancellationToken)
 		{
-
+			//1- provjera logina
 			KorisnickiNalog? logiraniKorisnik = await _applicationDbContext.KorisnickiNalog
 				.FirstOrDefaultAsync(k =>
 					k.Username == request.Username && k.Password == request.Password, cancellationToken);
 
 			if (logiraniKorisnik == null)
 			{
-
+				//pogresan username i password
 				return new MyAuthInfo(null);
 			}
 
@@ -43,10 +43,10 @@ namespace RentalProperty_.Entities.Endpoint.Authentification.Login
 				_emailSenderService.Posalji("testiram.gms@gmail.com", "2 faktor autentifikacija", $"Vaš 2F ključ je {TwoFKey}", false);
 			}
 
-
+			//2- generisati random string
 			string randomString = TokenGenerator.Generate(10);
 
-
+			//3- dodati novi zapis u tabelu AutentifikacijaToken za logiraniKorisnikId i randomString
 			var noviToken = new AutentifikacijaToken()
 			{
 				ipAdresa = Request.HttpContext.Connection.RemoteIpAddress?.ToString(),
@@ -59,7 +59,7 @@ namespace RentalProperty_.Entities.Endpoint.Authentification.Login
 			_applicationDbContext.Add(noviToken);
 			await _applicationDbContext.SaveChangesAsync(cancellationToken);
 
-
+			//4- vratiti token string
 			return new MyAuthInfo(noviToken);
 		}
 

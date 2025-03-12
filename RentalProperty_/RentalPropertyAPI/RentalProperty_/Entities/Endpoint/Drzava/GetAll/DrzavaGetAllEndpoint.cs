@@ -17,7 +17,7 @@ namespace RentalProperty_.Entities.Endpoint.Drzava.GetAll
 		}
 
 		[HttpGet]
-		public override async Task<DrzavaGetAllResponse> Handle([FromBody] DrzavaGetAllRequest request, CancellationToken cancellationToken)
+		public override async Task<DrzavaGetAllResponse> Handle([FromQuery] DrzavaGetAllRequest request, CancellationToken cancellationToken)
 		{
 			var drzave = await db.Drzava
 				.Select(x => new DrzavaGetAllResponseRow

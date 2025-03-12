@@ -1,11 +1,200 @@
 section{
     padding: 30px 0;
   }
-  .slike{
-    width: 50px;
-  }
-  
+ 
   select{
     cursor: pointer;
+  }
+  #adminkorisnici {
+    margin: 20px;
+  }
+  
+  .container-md {
+    margin-top: 20px;
+  }
+  
+  .row {
+    margin-bottom: 20px;
+  }
+  
+  h2 {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .btn {
+    font-size: 14px;
+  }
+  
+  .btn-outline-danger {
+    border: 1px solid #dc3545;
+    color: #dc3545;
+    background-color: transparent;
+  }
+  
+  .btn-outline-primary {
+    border: 1px solid #007bff;
+    color: #007bff;
+    background-color: transparent;
+  }
+  
+  .btn-outline-warning {
+    border: 1px solid #ffc107;
+    color: #ffc107;
+    background-color: transparent;
+  }
+  
+  .btn-outline-success {
+    border: 1px solid #28a745;
+    color: #28a745;
+    background-color: transparent;
+  }
+  
+  .btn-danger {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  .table {
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  .table-striped tbody tr:nth-child(odd) {
+    background-color: #f2f2f2;
+  }
+  
+  .slike {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  
+  input[type="text"],
+  input[type="password"],
+  select {
+    font-size: 14px;
+  }
+  
+  .form-control {
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .form-label {
+    font-weight: bold;
+  }
+  
+  .img-thumbnail {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .img-fluid {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .my-5 {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  
+  .secondary {
+    padding: 10px;
+  }
+  
+  .border {
+    border: 1px solid #ddd;
+  }
+  
+  .rounded {
+    border-radius: 8px;
+  }
+  
+  .d-flex {
+    display: flex;
+  }
+  
+  .justify-content-end {
+    justify-content: flex-end;
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  .mx-2 {
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+  
+  .my-2 {
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+  
+  .mr-2 {
+    margin-right: 8px;
+  }
+  
+  .mt-1 {
+    margin-top: 4px;
+  }
+  
+  .mt-2 {
+    margin-top: 8px;
+  }
+  
+  .mb-2 {
+    margin-bottom: 8px;
+  }
+  
+  .px-4 {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  
+  .py-3 {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+  
+  .btn-close {
+    background-color: transparent;
+    border: none;
+  }
+  
+  .btn-close:hover {
+    cursor: pointer;
+  }
+  
+  button[type="button"] {
+    font-size: 14px;
+  }
+  
+  button[type="submit"] {
+    font-size: 16px;
+  }
+  
+  form {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  input[type="file"] {
+    display: none;
+  }
+  
+  label {
+    font-size: 14px;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  select {
+    font-size: 14px;
   }
   

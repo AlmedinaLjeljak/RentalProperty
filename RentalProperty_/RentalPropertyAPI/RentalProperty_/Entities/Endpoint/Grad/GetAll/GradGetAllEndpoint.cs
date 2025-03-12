@@ -17,7 +17,7 @@ namespace RentalProperty_.Entities.Endpoint.Grad.GetAll
 		}
 
 		[HttpGet]
-		public override async Task<GradGetAllResponse> Handle([FromBody]GradGetAllRequest request,CancellationToken cancellationToken)
+		public override async Task<GradGetAllResponse> Handle([FromQuery]GradGetAllRequest request,CancellationToken cancellationToken)
 		{
 			var gradovi = await db.Grad
 				.Select(x => new GradGetAllResponseRow

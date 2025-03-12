@@ -7,6 +7,7 @@ namespace RentalProperty_.Helper.Auth
 {
 	public class MyAuthService
 	{
+
 		private readonly DataContext _applicationDbContext;
 		private readonly IHttpContextAccessor _httpContextAccessor;
 
@@ -55,6 +56,7 @@ namespace RentalProperty_.Helper.Auth
 		public AutentifikacijaToken? autentifikacijaToken { get; set; }
 
 		public bool isLogiran => korisnickiNalog != null;
+
 
 	}
 }

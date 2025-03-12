@@ -17,7 +17,7 @@ namespace RentalProperty_.Entities.Endpoint.Spol.GetAll
 		}
 
 		[HttpGet]
-		public override async Task<SpolGetAllResponse> Handle([FromBody]SpolGetAllRequest request,CancellationToken cancellationToken)
+		public override async Task<SpolGetAllResponse> Handle([FromQuery]SpolGetAllRequest request,CancellationToken cancellationToken)
 		{
 			var spolovi = await db.Spol
 				.Select(x => new SpolGetAllResponseRow

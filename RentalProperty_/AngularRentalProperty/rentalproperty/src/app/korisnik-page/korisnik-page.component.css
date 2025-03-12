@@ -1,5 +1,84 @@
-section{
-    padding: 30px 0;
+
+#korisnik {
+  background-color: #eee;
+  padding: 20px;
+}
+
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+
+.card {
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.card-body img {
+  border-radius: 50%;
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+
+.card-body h4 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.card-body .text-muted {
+  color: #6c757d;
+}
+
+.card-body p.mb-0 {
+  margin-bottom: 0;
+}
+
+hr {
+  border: 1px solid #ddd;
+  margin: 15px 0;
+}
+
+
+.row {
+  margin-bottom: 10px;
+}
+
+.col-sm-3 {
+  font-weight: 600;
+}
+
+.col-lg-8 {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.col-lg-4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-body .col-sm-9 {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #333;
+}
+
+
+@media (min-width: 992px) {
+  .col-lg-4 {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
-  
+}
+
   

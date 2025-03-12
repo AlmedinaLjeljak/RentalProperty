@@ -16,7 +16,7 @@ namespace RentalProperty_.Entities.Endpoint.Korisnik.GetAll
 			this.db = db;
 		}
 		[HttpGet]
-		public override async Task<KorisnikGetallResponse> Handle([FromBody] KorisnikGetallRequest request,CancellationToken cancellationToken)
+		public override async Task<KorisnikGetallResponse> Handle([FromQuery] KorisnikGetallRequest request,CancellationToken cancellationToken)
 		{
 			var korisnici = await db.Korisnik
 				.Select(x => new KorisnikGetAllResponseRow

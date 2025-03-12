@@ -123,8 +123,8 @@ export class AdministratorPageKorisniciComponent implements OnInit{
     });
   }
   private fetchDrzave() {
-    this.GradoviGetallEndpoint.Handle().subscribe((x:GradGetAllResponse )=>{
-      this.gradovi = x.gradovi;
+    this.DrzaveGetAllEndpoint.Handle().subscribe((x:DrzavaGetAllResponse )=>{
+      this.drzave = x.drzave;
     });
   }
 

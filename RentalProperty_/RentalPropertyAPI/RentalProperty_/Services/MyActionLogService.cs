@@ -15,6 +15,10 @@ namespace RentalProperty_.Services
 
 			var queryString = request.Query;
 
+			//if (queryString.Count == 0 && !request.HasFormContentType)
+			//    return 0;
+
+			//IHttpRequestFeature feature = request.HttpContext.Features.Get<IHttpRequestFeature>();
 			string detalji = "";
 			if (request.HasFormContentType)
 			{
@@ -24,7 +28,7 @@ namespace RentalProperty_.Services
 				}
 			}
 
-		
+			// convert stream to string
 			StreamReader reader = new StreamReader(request.Body);
 			string bodyText = await reader.ReadToEndAsync();
 
@@ -37,7 +41,11 @@ namespace RentalProperty_.Services
 				IpAdresa = request.HttpContext.Connection.RemoteIpAddress?.ToString(),
 			};
 
-			
+			//if (exceptionMessage != null)
+			//{
+			//    x.isException = true;
+			//    x.exceptionMessage = exceptionMessage.Error.Message + " |" + exceptionMessage.Error.InnerException;
+			//}
 
 			DataContext db = request.HttpContext.RequestServices.GetService<DataContext>();
 
