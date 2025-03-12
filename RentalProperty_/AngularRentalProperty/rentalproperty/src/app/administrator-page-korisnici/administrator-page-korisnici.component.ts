@@ -109,7 +109,7 @@ export class AdministratorPageKorisniciComponent implements OnInit{
       }
       reader.readAsDataURL(file);
     }
-  }
+  }   
 
   private fetchSpolovi() {
     this.SpolGetAllEndpoint.Handle().subscribe((x:SpolGetAllResponse )=>{

@@ -1,200 +1,203 @@
-section{
-    padding: 30px 0;
-  }
- 
-  select{
-    cursor: pointer;
-  }
-  #adminkorisnici {
-    margin: 20px;
-  }
-  
-  .container-md {
-    margin-top: 20px;
-  }
-  
-  .row {
-    margin-bottom: 20px;
-  }
-  
-  h2 {
-    font-size: 24px;
-    font-weight: bold;
-  }
-  
-  .btn {
-    font-size: 14px;
-  }
-  
-  .btn-outline-danger {
-    border: 1px solid #dc3545;
-    color: #dc3545;
-    background-color: transparent;
-  }
-  
-  .btn-outline-primary {
-    border: 1px solid #007bff;
-    color: #007bff;
-    background-color: transparent;
-  }
-  
-  .btn-outline-warning {
-    border: 1px solid #ffc107;
-    color: #ffc107;
-    background-color: transparent;
-  }
-  
-  .btn-outline-success {
-    border: 1px solid #28a745;
-    color: #28a745;
-    background-color: transparent;
-  }
-  
-  .btn-danger {
-    background-color: #dc3545;
-    color: white;
-  }
-  
-  .table {
-    width: 100%;
-    margin-top: 20px;
-  }
-  
-  .table-striped tbody tr:nth-child(odd) {
-    background-color: #f2f2f2;
-  }
-  
-  .slike {
-    width: 50px;
-    height: 50px;
-    object-fit: cover;
-    border-radius: 50%;
-  }
-  
-  input[type="text"],
-  input[type="password"],
-  select {
-    font-size: 14px;
-  }
-  
-  .form-control {
-    border-radius: 5px;
-    border: 1px solid #ccc;
-  }
-  
-  .form-label {
-    font-weight: bold;
-  }
-  
-  .img-thumbnail {
-    max-width: 100%;
-    height: auto;
-  }
-  
-  .img-fluid {
-    max-width: 100%;
-    height: auto;
-  }
-  
-  .my-5 {
-    margin-top: 50px;
-    margin-bottom: 50px;
-  }
-  
-  .secondary {
-    padding: 10px;
-  }
-  
-  .border {
-    border: 1px solid #ddd;
-  }
-  
-  .rounded {
-    border-radius: 8px;
-  }
-  
-  .d-flex {
-    display: flex;
-  }
-  
-  .justify-content-end {
-    justify-content: flex-end;
-  }
-  
-  .text-center {
-    text-align: center;
-  }
-  
-  .mx-2 {
-    margin-left: 8px;
-    margin-right: 8px;
-  }
-  
-  .my-2 {
-    margin-top: 8px;
-    margin-bottom: 8px;
-  }
-  
-  .mr-2 {
-    margin-right: 8px;
-  }
-  
-  .mt-1 {
-    margin-top: 4px;
-  }
-  
-  .mt-2 {
-    margin-top: 8px;
-  }
-  
-  .mb-2 {
-    margin-bottom: 8px;
-  }
-  
-  .px-4 {
-    padding-left: 16px;
-    padding-right: 16px;
-  }
-  
-  .py-3 {
-    padding-top: 12px;
-    padding-bottom: 12px;
-  }
-  
-  .btn-close {
-    background-color: transparent;
-    border: none;
-  }
-  
-  .btn-close:hover {
-    cursor: pointer;
-  }
-  
-  button[type="button"] {
-    font-size: 14px;
-  }
-  
-  button[type="submit"] {
-    font-size: 16px;
-  }
-  
-  form {
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  
-  input[type="file"] {
-    display: none;
-  }
-  
-  label {
-    font-size: 14px;
-    font-weight: bold;
-    display: block;
-    margin-bottom: 5px;
-  }
-  
-  select {
-    font-size: 14px;
-  }
-  
+/* General */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f7fc;
+}
+
+.container-md {
+  margin-top: 20px;
+}
+
+h2 {
+  color: #333;
+  font-weight: bold;
+}
+
+
+button.btn-outline-danger {
+  border-color: #dc3545;
+  color: #dc3545;
+  font-weight: bold;
+}
+
+button.btn-outline-danger:hover {
+  background-color: #dc3545;
+  color: white;
+}
+
+button.btn-outline-primary {
+  border-color: #007bff;
+  color: #007bff;
+}
+
+button.btn-outline-primary:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+button.btn-outline-warning {
+  border-color: #ffc107;
+  color: #ffc107;
+}
+
+button.btn-outline-warning:hover {
+  background-color: #ffc107;
+  color: white;
+}
+
+button.btn-outline-success {
+  border-color: #28a745;
+  color: #28a745;
+}
+
+button.btn-outline-success:hover {
+  background-color: #28a745;
+  color: white;
+}
+
+button.btn-close {
+  border: none;
+  background-color: transparent;
+  font-size: 1.5em;
+  color: #888;
+}
+
+button.btn-close:hover {
+  color: #333;
+}
+
+
+input.form-control,
+select.form-select {
+  margin-bottom: 15px;
+  border-radius: 5px;
+}
+
+input[type="file"] {
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+
+img.img-fluid {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+img.img-thumbnail {
+  margin-top: 10px;
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+
+table.table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+}
+
+table.table th, table.table td {
+  text-align: center;
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+}
+
+table.table th {
+  background-color: #007bff;
+  color: white;
+}
+
+table.table td {
+  background-color: #f9f9f9;
+}
+
+table.table tr:hover {
+  background-color: #f1f1f1;
+}
+
+button.btn-danger {
+  background-color: #dc3545;
+  border-color: #dc3545;
+  color: white;
+}
+
+button.btn-danger:hover {
+  background-color: #c82333;
+  border-color: #c82333;
+}
+
+.d-flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.d-flex.justify-content-end {
+  justify-content: flex-end;
+}
+
+
+input.secondary {
+  font-size: 1.1em;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.row.my-5 {
+  margin-top: 30px;
+}
+
+.border {
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+}
+
+.border.rounded {
+  border-radius: 10px;
+}
+
+.d-flex.justify-content-end {
+  margin-top: 20px;
+}
+
+
+.mx-2 {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.mt-1 {
+  margin-top: 5px;
+}
+
+.mt-2 {
+  margin-top: 10px;
+}
+
+.my-2 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+table.table td img.slike {
+  width: 50px; 
+  height: 50px; 
+  object-fit: cover; 
+  border-radius: 50%; 
+  margin: 0 auto; 
+  display: block;
+}
+
+
+img.img-thumbnail {
+  max-width: 100%;
+  height: auto;
+  max-height: 200px; 
+  border-radius: 10px;
+}

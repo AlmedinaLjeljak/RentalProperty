@@ -1,14 +1,44 @@
-section{
-    padding: 60px 0;
+/* Raspored svih stavki u navbar-u u horizontalnom redu */
+.navbar-nav {
+  display: flex;
+  justify-content: center; /* Poravnaj sve stavke u sredinu */
+  align-items: center; /* Vertikalno poravnanje */
+  width: 100%; /* Postavi širinu na 100% da bi se stavke ravnomerno rasporedile */
+}
+
+.nav-item {
+  margin: 0 15px; /* Dodaj horizontalni razmak između stavki */
+}
+
+/* Stilizovanje linkova u navbar-u */
+.nav-link {
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+  color: #333; /* Standardna boja za tekst */
+}
+
+.nav-link:hover {
+  color: #007bff; /* Boja pri hover-u */
+  font-weight: bold;
+}
+
+/* Stil za dugme Odjava */
+.nav-link.text-danger {
+  color: #dc3545; /* Crvena boja za Odjava */
+}
+
+.nav-link.text-danger:hover {
+  color: #ff6f6f; /* Svetlija crvena pri hover-u */
+}
+
+/* Prilagodba za mobilne uređaje - stavke i dugme za menij */
+@media (max-width: 768px) {
+  .navbar-nav {
+    flex-direction: column; /* Na manjim ekranima, stavke se prikazuju u vertikalnom redu */
+    align-items: flex-start; /* Poravnaj stavke sa početkom */
   }
-  #logo{
-    width: 100px;
+
+  .nav-item {
+    margin: 10px 0; /* Dodaj vertikalni razmak između stavki */
   }
-  
-  a{
-    font-size: 20px;
-    cursor: pointer;
-  }
-  
-  
-  
+}
