@@ -7,7 +7,8 @@ using RentalProperty_.Helper;
 namespace RentalProperty_.Entities.Endpoint.Tfa.GetAll
 {
 	[Route("Tfa-GetAll")]
-	public class TfaGetAllEndpoint: MyBaseEndpoint<TfaGetAllRequest,TfaGetAllResponse>
+
+	public class TfaGetAllEndpoint : MyBaseEndpoint<TfaGetAllRequest, TfaGetAllResponse>
 	{
 		private readonly DataContext db;
 
@@ -26,7 +27,7 @@ namespace RentalProperty_.Entities.Endpoint.Tfa.GetAll
 					KorisnickiNalogId = group.Key,
 					LastTwoFKey = group.OrderByDescending(x => x.id).Select(x => x.TwoFKey).FirstOrDefault()
 				})
-			.ToListAsync(cancellationToken);
+				.ToListAsync(cancellationToken);
 
 			var tfas = lastTwoFKeys.Select(x => new TfaGetallResponseRow
 			{

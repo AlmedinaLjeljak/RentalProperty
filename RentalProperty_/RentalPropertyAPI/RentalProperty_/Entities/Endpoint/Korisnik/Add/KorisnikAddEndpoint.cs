@@ -8,7 +8,7 @@ using RentalProperty_.Helper.Auth;
 namespace RentalProperty_.Entities.Endpoint.Korisnik.Add
 {
 	[Microsoft.AspNetCore.Mvc.Route("Korisnik-Add")]
-	[MyAuthorization]
+	//[MyAuthorization]
 	public class KorisnikAddEndpoint:MyBaseEndpoint<KorisnikAddRequest,KorisnikAddResponse>
 	{
 		private readonly DataContext db;

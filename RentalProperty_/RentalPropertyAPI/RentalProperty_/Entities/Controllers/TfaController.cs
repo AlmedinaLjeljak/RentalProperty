@@ -5,7 +5,7 @@ namespace RentalProperty_.Entities.Controllers
 {
 	[ApiController]
 	[Route("[controller]/[action]")]
-	public class TfaController:ControllerBase
+	public class TfaController : ControllerBase
 	{
 		private readonly DataContext db;
 		public TfaController(DataContext dbContext)
@@ -14,16 +14,18 @@ namespace RentalProperty_.Entities.Controllers
 		}
 
 		[HttpGet]
+
 		public object GetAll()
 		{
-			var sviZapiis = db.AutentifikacijaToken
+			var sviZapisi = db.AutentifikacijaToken
 				.Select(x => new
 				{
-					id=x.KorisnickiNalogId,
-					twoKey=x.TwoFKey
+					ID = x.KorisnickiNalogId,
+					TwoFKey = x.TwoFKey
+				}
+				).ToList();
 
-				}).ToList();
-			return sviZapiis;
+			return sviZapisi;
 		}
 	}
 }

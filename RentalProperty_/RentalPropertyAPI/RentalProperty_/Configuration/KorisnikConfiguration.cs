@@ -21,7 +21,7 @@ namespace RentalProperty_.Configuration
 					GradID = 5,
 					DrazavaID = 1,
 					Slika = "assets/1korisnik.jpg",
-					is2FActive = true
+					is2FActive = false
 
 				},
 				new Korisnik
@@ -36,7 +36,7 @@ namespace RentalProperty_.Configuration
 					GradID=8,
 					DrazavaID=1,
 					Slika="assets/2korisnik.jpg",
-					is2FActive=true
+					is2FActive=false
 				},
 				new Korisnik
 				{
@@ -50,7 +50,7 @@ namespace RentalProperty_.Configuration
 					GradID=3,
 					DrazavaID=2,
 					Slika="assets/3korisnik.jpg",
-					is2FActive=true
+					is2FActive=false
 
 				},
 				new Korisnik
@@ -65,7 +65,7 @@ namespace RentalProperty_.Configuration
 					GradID=4,
 					DrazavaID=3,
 					Slika="assets/4korisnik.jpg",
-					is2FActive=true
+					is2FActive=false
 				}
 				);
 		}

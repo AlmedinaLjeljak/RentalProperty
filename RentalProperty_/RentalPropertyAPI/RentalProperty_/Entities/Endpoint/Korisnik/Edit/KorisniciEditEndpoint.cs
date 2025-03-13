@@ -7,7 +7,7 @@ using RentalProperty_.Helper.Auth;
 namespace RentalProperty_.Entities.Endpoint.Korisnik.Edit
 {
 	[Microsoft.AspNetCore.Mvc.Route("Korisnik-Edit")]
-	[MyAuthorization]
+	//[MyAuthorization]
 	public class KorisniciEditEndpoint:MyBaseEndpoint<KorisniciEditRequest,int>
 	{
 		private readonly DataContext db;
