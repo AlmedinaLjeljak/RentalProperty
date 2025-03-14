@@ -35,7 +35,7 @@
         </li>
 
         <li class="nav-item mx-2">
-          <a class="nav-link" routerLink="/FAQPage">FAQ</a>
+          <a class="nav-link" routerLink="/FAQPage" [fragment]="'faq'">FAQ</a>
         </li>
 
         <li class="nav-item mx-2" *ngIf="MyAuthService.nijelLogiran()">

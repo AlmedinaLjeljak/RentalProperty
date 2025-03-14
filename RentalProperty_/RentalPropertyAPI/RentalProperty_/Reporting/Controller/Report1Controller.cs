@@ -24,7 +24,7 @@ namespace RentalProperty_.Reporting.Controller
 			List<Report1Model> podaci = db.Korisnik
 				.Include("Grad")
 				.Include("Spol")
-				//.Include("Drzava")
+				.Include("Drzava")
 				.Select(s => new Report1Model
 				{
 					Ime = s.Ime,
@@ -32,7 +32,7 @@ namespace RentalProperty_.Reporting.Controller
 					Username = s.Username,
 					NazivGrad = s.Grad.Naziv,
 					NazivSpol = s.Spol.Naziv,
-					//NazivDrzave = s.Drzava.Naziv
+					NazivDrzave = s.Drzava.Naziv
 
 				}).ToList();
 

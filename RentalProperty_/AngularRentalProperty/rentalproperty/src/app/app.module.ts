@@ -75,7 +75,7 @@ import { HashLocationStrategy, LocationStrategy  } from '@angular/common';
       { provide: HTTP_INTERCEPTORS, useClass: MyAuthInterceptor, multi: true },
       {provide : LocationStrategy , useClass: HashLocationStrategy},
       AutorizacijaGuardKorisnik,
-      AutorizacijaGuardAdministrator
+      AutorizacijaGuardAdministrator,
     ],
     bootstrap: [AppComponent]
   })

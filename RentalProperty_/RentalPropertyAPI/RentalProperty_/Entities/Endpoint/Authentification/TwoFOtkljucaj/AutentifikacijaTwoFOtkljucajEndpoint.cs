@@ -4,6 +4,8 @@ using RentalProperty_.Entities.Endpoint.Authentification.TwoFOtkljucaj;
 using RentalProperty_.Helper;
 using RentalProperty_.Helper.Auth;
 
+namespace RentalProperty_.Entities.Endpoint.Authentification.TwoFOtkljucaj;
+
 [Route("Autentifikacija")]
 
 public class AutentifikacijaTwoFOtkljucajEndpoint : MyBaseEndpoint<AutentifikacijaTwoFOtkljucajRequest, NoResponse>
