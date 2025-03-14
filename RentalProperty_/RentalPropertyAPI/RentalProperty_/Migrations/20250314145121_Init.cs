@@ -359,10 +359,10 @@ namespace RentalProperty_.Migrations
                 {
                     { 1, "admin", "admin", false },
                     { 2, "host", "host", false },
-                    { 3, "almedina123", "almedinalj", true },
-                    { 4, "alema123", "alemad", true },
-                    { 5, "adil123", "adilj", true },
-                    { 6, "denis123", "denism", true }
+                    { 3, "almedina123", "almedinalj", false },
+                    { 4, "alema123", "alemad", false },
+                    { 5, "adil123", "adilj", false },
+                    { 6, "denis123", "denism", false }
                 });
 
             migrationBuilder.InsertData(

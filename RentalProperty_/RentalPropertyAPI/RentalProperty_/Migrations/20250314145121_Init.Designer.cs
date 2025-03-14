@@ -12,7 +12,7 @@ using RentalProperty_.Data;
 namespace RentalProperty_.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20250227193809_Init")]
+    [Migration("20250314145121_Init")]
     partial class Init
     {
         /// <inheritdoc />
@@ -575,7 +575,7 @@ namespace RentalProperty_.Migrations
                             ID = 3,
                             Password = "almedina123",
                             Username = "almedinalj",
-                            is2FActive = true,
+                            is2FActive = false,
                             BrojTelefona = "062123123",
                             DrazavaID = 1,
                             GradID = 5,
@@ -589,7 +589,7 @@ namespace RentalProperty_.Migrations
                             ID = 4,
                             Password = "alema123",
                             Username = "alemad",
-                            is2FActive = true,
+                            is2FActive = false,
                             BrojTelefona = "062345678",
                             DrazavaID = 1,
                             GradID = 8,
@@ -603,7 +603,7 @@ namespace RentalProperty_.Migrations
                             ID = 5,
                             Password = "adil123",
                             Username = "adilj",
-                            is2FActive = true,
+                            is2FActive = false,
                             BrojTelefona = "062897855",
                             DrazavaID = 2,
                             GradID = 3,
@@ -617,7 +617,7 @@ namespace RentalProperty_.Migrations
                             ID = 6,
                             Password = "denis123",
                             Username = "denism",
-                            is2FActive = true,
+                            is2FActive = false,
                             BrojTelefona = "061789635",
                             DrazavaID = 3,
                             GradID = 4,
