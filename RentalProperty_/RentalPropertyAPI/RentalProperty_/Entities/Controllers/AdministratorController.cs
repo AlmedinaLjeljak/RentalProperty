@@ -15,18 +15,7 @@ namespace RentalProperty_.Entities.Controllers
 			db = dbContext;
 		}
 		[HttpGet]
-		/*public object GetAll()
-		{
-			var zapisi = db.KorisnikAgent
-				.Select(x => new
-				{
-					korisnikId = x.KorisnikId,
-					agentId = x.AgentId,
-					datumTermina = x.DatumTermina,
-					vrijemeSati = x.VrijemeSat
-				}).ToList();
-			return zapisi;
-		}*/
+		
 		public object GetAll()
 		{
 			var zapisi = db.Administrator
